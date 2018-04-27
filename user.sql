@@ -4,22 +4,23 @@
 --
 
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `users`;
 
-CREATE TABLE `user` (
-  `user_id` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+CREATE TABLE `users` (
+  `user_ID` int NOT NULL,
+  `user_name` text NOT NULL,
+  `user_pass` text NOT NULL,
   
-  PRIMARY KEY (`user_id`),
+  PRIMARY KEY (`user_ID`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `users`
 --
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `course` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('fry','fry123',), ('wy','wy123');
+INSERT INTO `user` VALUES ('1','fry','fry123',), ('2','wy','wy123');
 /*!40000 ALTER TABLE `course` ENABLE KEYS */;
 UNLOCK TABLES;
 
