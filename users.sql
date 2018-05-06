@@ -3,8 +3,8 @@
 --USE wishesmap;
 CREATE TABLE `users`(
   user_ID INT  NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-  user_name VARCHAR(255) ,
-  user_pass VARCHAR(255)
+  user_name text ,
+  user_pass text,
 );
 
 INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'admin', '123456');
