@@ -13,4 +13,4 @@ INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'root', '123456');
 INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'tomcat', '123456');
 INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'servlet', '123456');
 
-SELECT  user_ID FROM users WHERE user_name = 'admin' AND user_pass = '123456';
+SELECT  user_ID FROM users WHERE user_name = 'root' AND user_pass = '123456';
