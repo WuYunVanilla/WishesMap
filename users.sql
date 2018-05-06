@@ -1,25 +1,15 @@
--- Database: wishesmap
---
--- Table structure for table `users`
---
+--DROP DATABASE IF EXISTS wishesmap;
+--CREATE DATABASE wishesmap;
+--USE wishesmap;
+CREATE TABLE `users`(
+  user_ID INT  NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  user_name VARCHAR(255) ,
+  user_pass VARCHAR(255)
+);
 
+INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'admin', '123456');
+INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'root', '123456');
+INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'tomcat', '123456');
+INSERT INTO `users` (user_ID, user_name, user_pass) VALUE (0, 'servlet', '123456');
 
-DROP TABLE IF EXISTS `users`;
-
-CREATE TABLE `users` (
-  `user_ID` int NOT NULL,
-  `user_name` text NOT NULL,
-  `user_pass` text NOT NULL,
-  
-  PRIMARY KEY (`user_ID`),
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `course` ENABLE KEYS */;
-UNLOCK TABLES;
-
--- Dump completed on 2016-12-22 18:04:16
+SELECT count(*) AS `count`, user_ID FROM users WHERE user_name = 'admin' AND user_pass = '12356';
