@@ -1,6 +1,6 @@
--- Database: WishesMap
+-- Database: wishesmap
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
 
@@ -18,9 +18,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `course` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('1','fry','fry123',), ('2','wy','wy123');
+LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `course` ENABLE KEYS */;
 UNLOCK TABLES;
 
