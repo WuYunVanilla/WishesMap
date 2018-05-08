@@ -2,7 +2,6 @@ package myservlet;
 
 
 import com.google.gson.Gson;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +13,6 @@ import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.regex.Pattern;
 
 
 @WebServlet(name = "login", urlPatterns = {"/login"})

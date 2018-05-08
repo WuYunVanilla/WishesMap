@@ -4,7 +4,7 @@
 
 **英文名称**：login
 
-**url**：http://111.231.119.201:8080/wishesmap/login
+**url**：http://54.201.190.180:8080/wishesmap/login
 
 ## 接口含义
 

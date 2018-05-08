@@ -29,6 +29,7 @@ public class BuildDB {
         }
     }
 
+    //以后迭代是否要改进synchronized ？？-->to 提高性能！
     public static synchronized BuildDB getDatabase() {
         if (database == null)
             database = new BuildDB(driver, addr, port, dbname, user, password);
@@ -36,9 +37,9 @@ public class BuildDB {
     }
 
 
-    public static void main(String[] args) {
-        String insert = String.format("insert into `users` value (0, '%s', '%s')", "java", "123456");
-        System.out.println(insert);
-    }
+//    public static void main(String[] args) {
+//        String insert = String.format("insert into `users` value (0, '%s', '%s')", "java", "123456");
+//        System.out.println(insert);
+//    }
 
 }

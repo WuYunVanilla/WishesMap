@@ -4,7 +4,7 @@
 
 英文名称：registor
 
-**url**：http://111.231.119.201:8080/wishesmap/register
+**url**：http://54.201.190.180:8080/wishesmap/register
 
 ## 接口含义
 
