@@ -1,6 +1,7 @@
 package myservlet;
 
 import com.google.gson.Gson;
+import myservlet.models.UserInfo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
