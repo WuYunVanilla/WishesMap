@@ -12,7 +12,7 @@ CREATE TABLE `wishes`(
   date DATE,
   date_finish DATE,
   pic MEDIUMBLOB,
-  user_ID INT ，
+  user_ID INT ,
   FOREIGN KEY (user_ID) REFERENCES users(user_ID)
 
  )ENGINE=InnoDB DEFAULT CHARSET=utf8;
