@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wishesmap">
+    <output-path>$PROJECT_DIR$/out/artifacts/wishesmap</output-path>
+    <root id="archive" name="wishesmap.war">
+      <element id="javaee-facet-resources" facet="WishesMapbackend/web/Web" />
+      <element id="module-output" name="WishesMapbackend" />
+    </root>
+  </artifact>
+</component>

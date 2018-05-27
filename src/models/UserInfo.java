@@ -1,9 +1,9 @@
-package myservlet.models;
+package models;
 
 public class UserInfo {
-       String user_ID = null;
-       String user_name = null;
-       String user_pass = null;
+    public String user_ID = null;
+    public String user_name = null;
+    public String user_pass = null;
 
     public UserInfo(String user_ID) {
         this.user_ID = user_ID;

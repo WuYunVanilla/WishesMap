@@ -2,7 +2,7 @@ package myservlet;
 
 
 import com.google.gson.Gson;
-import myservlet.models.UserInfo;
+import models.UserInfo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -50,9 +50,13 @@ public class LoginServlet extends HttpServlet {
         String sql = String.format("select count(*) as count, user_ID from users where user_name = '%s' and user_pass = '%s'", user.user_name, user.user_pass);
 //        System.out.println(json);
         try {
+
             ResultSet rs = stmt.executeQuery(sql);
+
             rs.next();
+
             int count = rs.getInt("count");
+
             if (count > 0)
                 user_ID = rs.getInt("user_ID");
             else
@@ -60,6 +64,7 @@ public class LoginServlet extends HttpServlet {
             backJson = String.format("{\"user_ID\":%d}", user_ID);
 
         } catch (SQLException e) {
+
             e.printStackTrace();
         }
         br.close();

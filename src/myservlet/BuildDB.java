@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class BuildDB {
     private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String addr = "54.201.190.180";
+    private static final String addr = "127.0.0.1";
     private static final String port = "3306";
     private static final String dbname = "wishesmap";
     private static final String user = "root";

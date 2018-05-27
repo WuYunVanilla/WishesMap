@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="wishedmapTest">
-    <output-path>$PROJECT_DIR$/out/artifacts/wishedmapTest</output-path>
-    <root id="archive" name="wishedmapTest.war" />
-  </artifact>
-</component>

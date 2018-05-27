@@ -1,7 +1,8 @@
 package myservlet;
 
 import com.google.gson.Gson;
-import myservlet.models.UserInfo;
+import models.UserInfo;
+import models.WishInfo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,20 +44,32 @@ public class HomeServlet extends HttpServlet {
         }
 
         String backJson = "";
-        int user_ID;
         UserInfo user = gson.fromJson(json.toString(), UserInfo.class);
-        String sql = String.format("select wishes_ID,lat,lng,status from wishes where user_ID = '%s'", user.user_ID);
+        String sql = String.format("select wish_ID,lat,lng,status from wishes where user_ID = '%s'", user.user_ID);
 //        System.out.println(json);
         try {
             ResultSet rs = stmt.executeQuery(sql);
+
+            rs.last();
+            int rowCount = rs.getRow(); //获得ResultSet的总行数
+            WishInfo[] wishes = new WishInfo[rowCount];
+            rs.beforeFirst();// 返回第一个（记住不是rs.first()）,不写的话下面的循环里面没值
+
+            int pt =0;
             while(rs.next()) {
-                int count = rs.getInt("count");
-                if (count > 0)
-                    user_ID = rs.getInt("user_ID");
-                else
-                    user_ID = -1;
-                backJson = String.format("{\"user_ID\":%d}", user_ID);
+                String wish_ID = rs.getInt("wish_ID")+"";
+
+                double lat = rs.getDouble("lat");
+                double lng = rs.getDouble("lng");
+                int status_int_type  = rs.getInt("status");
+
+                boolean status = (status_int_type == 1);
+                WishInfo wish = new WishInfo(wish_ID,lat,lng,status);
+
+                wishes[pt++]=wish;
             }
+            backJson = gson.toJson(wishes);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
